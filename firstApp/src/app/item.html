@@ -1,0 +1,10 @@
+<p> Reference : {{ item.reference }} </p>
+<p> Nom du client : {{ item.name }} </p>
+
+<a href (click) = "getDetails($event)" data-id= "{{ item.reference }}">Détails</a>
+
+<p [ngStyle]="myStyle_0" *ngIf="0==item.state">A livrer</p>
+<p [ngStyle]="myStyle_1" *ngIf="1==item.state">En cours de livraison</p>
+<p [ngStyle]="myStyle_2" *ngIf="2==item.state">Commande livrée</p>
+
+<hr />

@@ -1,0 +1,14 @@
+
+.container {
+	display : grid;
+	grid-template-columns: 50% auto;
+}
+
+.color-dark {
+	background: blue;
+}
+
+.color-light {
+	background: lightblue;
+}
+

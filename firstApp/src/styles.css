@@ -1,0 +1,35 @@
+body {
+	background: antiquewhite;
+	padding: 2em;
+	font-family: 'Raleways','Arial';
+}
+ul {
+	list-style-type: none;
+	font-size: 1em;
+	padding: 0;
+}
+ul li{
+	display: inline;
+	margin-right: 5px;
+	font-size: 1em;
+
+}
+ul li a{
+	font-size: 1.2em;
+	margin-right: 5px;
+}
+a {
+	color: blue;
+	text-decoration: none;
+}
+button {
+	color: purple;
+	text-decoration: none;
+	margin-top: 5px;
+	font-size: 1.1em;
+}
+p {
+	color: black;
+	margin-top: 1px;
+	font-size: 1.3em;
+}

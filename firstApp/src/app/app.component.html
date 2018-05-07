@@ -1,0 +1,71 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:right;">
+  <img width="100" alt="Kogri Logo" src="../assets/picture/mak.png">
+</div>
+
+<div style="text-align:center;">
+  <h1>
+    Interpolation de titre {{ title | uppercase}} ! 
+  </h1>
+</div>
+
+<form #itemForm="ngForm">
+    <input [(ngModel)]= "name" name="name" minLenght="5"required/>
+    <input [(ngModel)]= "reference" name="reference" required #ref="ngModel"/>
+    <span [hidden]="ref.valid || ref.pristine">Champ non valide</span>
+    <input [(ngModel)]= "state" name="state" required/>
+    <button [disabled]="!itemForm.form.valid" (click)= "createObjectOpti()"> Ajouter une commande </button>
+</form>
+
+<div>
+    <div>
+    <input [(ngModel)]="searchText" placeholder="search text goes here">
+    <ul>
+        <li *ngFor="let item of client | filter : searchText">
+          <p *ngIf="searchText==item" >Nom des clients : {{item}} </p>
+          {{item}}
+
+        </li>
+    </ul>
+    </div>
+
+
+    <input [(ngModel)]= "name"/>
+    <input [(ngModel)]= "reference"/>
+    <input [(ngModel)]= "state"/>
+    <button (click)= "createObject()"> Ajouter une commande </button>
+    <br>
+    <input [(ngModel)]= "reference"/>
+    <button (click)= "deleteObject()"> Supprimer une commande </button>
+    <br>
+    <button (click)= "annuleObject()"> Annuler la derniere commande </button>
+
+    <div *ngFor="let item of collection">
+        <item [item]="item" (onGetDetails)="onGetDetails($event)"></item>
+    </div>
+
+
+<h2>Here are some links : </h2>
+
+
+<ul>
+  <li>
+    <a target="_blank" rel="noopener" href="https://www.tutorialspoint.com/angular2/index.htm">Angular 2 Tuto</a>
+  </li>
+  <li>
+    <a target="_blank" rel="noopener" href="http://doc.qt.io/qt-5/sql-sqlstatements.html">Qt docs</a>
+  </li>
+  <li>
+    <a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/nodejs/angular-tutorial">Angular environnement</a>
+  </li>
+  <li>
+    <a target="_blank" rel="noopener" href="https://coursetro.com/posts/code/105/How-to-Install-Angular-5-(Tutorial)">Angular video</a>
+  </li>
+  <li>
+    <a target="_blank" rel="noopener" href="https://angular.io/api">Angular api</a>
+  </li>
+</ul>
+
+</div>
+
+
